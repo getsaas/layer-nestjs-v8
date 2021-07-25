@@ -14,7 +14,7 @@
     "scripts": {
         "clean": "mkdirp dist && rimraf dist/*",
         "layer": "npm run clean && mkdirp dist/nodejs && cp package.json dist/nodejs/ && cd ./dist/nodejs/ && npm i --prod && cd .. && zip -r getsaas-layer-nestjs-v8.zip ./*",
-        "pub": "yarn npm publish",
+        "pub": "npm publish --access public",
         "major": "yarn version major",
         "minor": "yarn version minor",
         "vpatch": "yarn version patch"
