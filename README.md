@@ -78,7 +78,7 @@ When you build your lambda function for deployment, make sure to only install `p
 3. Select `Custom layers (Choose a layer from a list of layers created by your AWS account or organization.)` as the Layer source,
 4. From the `Custom layers` dropdown list, select `getsaas-layer-nestjs-v8` and select the appropriate layer version:
 
-![Provide layer ARN](img/usage.png "Provide layer ARN screenshot")
+![Provide layer ARN](https://raw.githubusercontent.com/getsaas/layer-nestjs-v8/master/img/usage.png "Provide layer ARN screenshot")
 
 [Redis-based External Queues]: https://docs.nestjs.com/techniques/queues
 [Elasticsearch Integration]: https://github.com/nestjs/elasticsearch
