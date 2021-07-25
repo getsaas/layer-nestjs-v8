@@ -6,8 +6,8 @@ on:
   push:
     branches: [ master ]
 jobs:
-  layer:
-    name: Publish new AWS Lambda layer version
+  build:
+    name: Build and layer deployment package
     runs-on: ubuntu-latest
     if: "contains(github.event.head_commit.message, '#publish-layer')"
     steps:
@@ -25,4 +25,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: npm run layer
-    
+    - name: Publish new AWS Lambda layer version
+      run: |
+        aws lambda publish-layer-version --layer-name getsaas-layer-nestjs-v8 --zip-file fileb://dist/getsaas-layer-nestjs-v8.zip
