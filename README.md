@@ -15,7 +15,7 @@ Here's the list of packages provided by this layer:
 | `@nestjs/common` | `^8.0.4` | NestJS Core Dependencies |
 | `@nestjs/core` | `^8.0.4` | NestJS Core Dependencies |
 | `@nestjs/bull` | `^0.4.0` | [Redis-based External Queues] |
-| `bull` | `3.3` | [Redis-based External Queues] |
+| `bull` | `^3.3` | [Redis-based External Queues] |
 | `@nestjs/config` | `^1.0.1` | [Configuration] |
 | `@nestjs/cqrs` | `^8.0.0` | [Command Query Responsibility Segregation] |
 | `@nestjs/elasticsearch` | `^8.0.0` | [Elasticsearch Integration] |
@@ -90,3 +90,5 @@ When you build your lambda function for deployment, make sure to only install `p
 [Passport-based Auth]: https://docs.nestjs.com/security/authentication
 [Request Rate Limiting]: https://docs.nestjs.com/security/rate-limiting
 [MongoDB Support]: https://docs.nestjs.com/recipes/mongodb
+[In-App Event Emitter]: https://docs.nestjs.com/techniques/events
+[Express on AWS Lambda]: https://www.npmjs.com/package/@vendia/serverless-express

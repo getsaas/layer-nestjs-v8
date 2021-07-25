@@ -21,9 +21,10 @@
     },
     "keywords": [
         "aws",
-        "aws lambda",
+        "lambda",
         "layer",
         "nestjs",
+        "javascript",
         "typescript",
         "nodejs"
     ],
@@ -49,7 +50,7 @@
         "@nestjs/throttler": "^2.0.0",
         "@vendia/serverless-express": "^4.3.9",
         "apollo-server-core": "2.21.1",
-        "bull": "3.3",
+        "bull": "^3.3",
         "cache-manager": "^3.4.4",
         "class-transformer": "^0.4.0",
         "class-validator": "^0.13.1",
