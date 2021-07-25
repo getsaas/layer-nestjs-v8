@@ -1,7 +1,7 @@
 {
     "name": "@getsaas/layer-nestjs-v8",
     "description": "Kitchen Sink (kinda) AWS Layer for apps built on NestJS v8",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "license": "Apache-2.0",
     "author": {
         "name": "Sergio Leon",
