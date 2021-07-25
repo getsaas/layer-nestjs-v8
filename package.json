@@ -12,8 +12,8 @@
     ],
     "main": "./lib/index.js",
     "scripts": {
-        "clean": "rimraf dist/*",
-        "layer": "rimraf dist && mkdirp dist/nodejs && cp package.json dist/nodejs/ && cd ./dist/nodejs/ && npm i --prod && cd .. && zip -r getsaas-layer-nestjs-v8.zip ./*",
+        "clean": "mkdirp dist && rimraf dist/*",
+        "layer": "npm run clean && mkdirp dist/nodejs && cp package.json dist/nodejs/ && cd ./dist/nodejs/ && npm i --prod && cd .. && zip -r getsaas-layer-nestjs-v8.zip ./*",
         "pub": "yarn npm publish",
         "major": "yarn version major",
         "minor": "yarn version minor",

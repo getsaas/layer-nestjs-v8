@@ -1,14 +1,10 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
-
+name: Publish new AWS Lambda layer version
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
 jobs:
   layer:
     name: Publish new AWS Lambda layer version
@@ -21,6 +17,8 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
+    - name: Install dependencies
+      run: npm i
     - name: Run script 'layer' from package
       env:
         AWS_DEFAULT_REGION: us-east-1
