@@ -1,0 +1,68 @@
+{
+    "name": "@getsaas/layer-nestjs-v8",
+    "description": "Kitchen Sink (kinda) AWS Layer for apps built on NestJS v8",
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "author": {
+        "name": "Sergio Leon",
+        "email": "serge@1nationgfx.com"
+    },
+    "files": [
+        "/lib"
+    ],
+    "main": "./lib/index.js",
+    "scripts": {
+        "clean": "rimraf lib/*",
+        "layer": "rimraf dist && mkdirp dist/nodejs && cp package.json dist/nodejs/ && cd ./dist/nodejs/ && npm i --prod && cd .. && zip -r getsaas-layer-nestjs-v8.zip ./*",
+        "pub": "yarn npm publish",
+        "major": "yarn version major",
+        "minor": "yarn version minor",
+        "vpatch": "yarn version patch"
+    },
+    "keywords": [
+        "aws",
+        "aws lambda",
+        "layer",
+        "nestjs",
+        "typescript",
+        "nodejs"
+    ],
+    "dependencies": {
+        "@apollo/federation": "0.26.0",
+        "@apollo/gateway": "0.33.0",
+        "@elastic/elasticsearch": "7.4.0",
+        "@nestjs/bull": "^0.4.0",
+        "@nestjs/common": "^8.0.4",
+        "@nestjs/config": "^1.0.1",
+        "@nestjs/core": "^8.0.4",
+        "@nestjs/cqrs": "^8.0.0",
+        "@nestjs/elasticsearch": "^8.0.0",
+        "@nestjs/event-emitter": "^1.0.0",
+        "@nestjs/graphql": "^8.0.2",
+        "@nestjs/jwt": "^8.0.0",
+        "@nestjs/mapped-types": "^1.0.0",
+        "@nestjs/mongoose": "^8.0.0",
+        "@nestjs/passport": "^8.0.0",
+        "@nestjs/platform-express": "^8.0.4",
+        "@nestjs/serve-static": "^2.2.2",
+        "@nestjs/swagger": "^5.0.8",
+        "@nestjs/throttler": "^2.0.0",
+        "apollo-server-core": "2.21.1",
+        "bull": "3.3",
+        "cache-manager": "^3.4.4",
+        "class-transformer": "^0.4.0",
+        "class-validator": "^0.13.1",
+        "eventemitter2": "6.4.4",
+        "express": "^4.17.1",
+        "graphql": "14.5.0",
+        "mongoose": "^5.12.4",
+        "passport": "^0.4.0",
+        "reflect-metadata": "^0.1.13",
+        "rxjs": "^7.2.0",
+        "swagger-ui-express": "^4.1.6"
+    },
+    "devDependencies": {
+        "mkdirp": "^1.0.4",
+        "rimraf": "^3.0.2"
+    }
+}

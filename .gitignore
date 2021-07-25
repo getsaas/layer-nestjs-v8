@@ -1,0 +1,27 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+lib
+build
+dist
+
+# others
+npm-debug.log
+tsconfig.tsbuildinfo
+.n
+/.npmrc
+
+# yarn berry 
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
