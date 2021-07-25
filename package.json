@@ -12,7 +12,7 @@
     ],
     "main": "./lib/index.js",
     "scripts": {
-        "clean": "rimraf lib/*",
+        "clean": "rimraf dist/*",
         "layer": "rimraf dist && mkdirp dist/nodejs && cp package.json dist/nodejs/ && cd ./dist/nodejs/ && npm i --prod && cd .. && zip -r getsaas-layer-nestjs-v8.zip ./*",
         "pub": "yarn npm publish",
         "major": "yarn version major",
@@ -28,9 +28,9 @@
         "nodejs"
     ],
     "dependencies": {
-        "@apollo/federation": "0.26.0",
-        "@apollo/gateway": "0.33.0",
-        "@elastic/elasticsearch": "7.4.0",
+        "@apollo/federation": "^0.26.0",
+        "@apollo/gateway": "^0.33.0",
+        "@elastic/elasticsearch": "^7.4.0",
         "@nestjs/bull": "^0.4.0",
         "@nestjs/common": "^8.0.4",
         "@nestjs/config": "^1.0.1",
@@ -47,6 +47,7 @@
         "@nestjs/serve-static": "^2.2.2",
         "@nestjs/swagger": "^5.0.8",
         "@nestjs/throttler": "^2.0.0",
+        "@vendia/serverless-express": "^4.3.9",
         "apollo-server-core": "2.21.1",
         "bull": "3.3",
         "cache-manager": "^3.4.4",
@@ -54,7 +55,7 @@
         "class-validator": "^0.13.1",
         "eventemitter2": "6.4.4",
         "express": "^4.17.1",
-        "graphql": "14.5.0",
+        "graphql": "^14.5.0",
         "mongoose": "^5.12.4",
         "passport": "^0.4.0",
         "reflect-metadata": "^0.1.13",
